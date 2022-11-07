@@ -1,14 +1,16 @@
-import MainHome from "../../common/mainHome/MainHome";
+
+import { useState } from "react";
 import Navbar from "../../common/navbar/Navbar";
+import PruebasHooks from "../../common/pruebasHooks/PruebasHooks";
 
 export const Home = () => {
-  let nombre = "pepito";
-  let apellido = "perez"
+
+  const [ contador, setContador ] = useState(0)
 
   return (
     <>
       <Navbar />
-      <MainHome nombre={nombre} apellido={apellido} />
+      <PruebasHooks contador={contador}  setContador={setContador}/>
     </>
   );
 };
